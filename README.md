@@ -178,7 +178,6 @@ $> git verify
 
 ## Exercise 19: pick-your-features
 ```shell
-# get an idea of the logs currently and know the SHA-1's needed
 $> git log --oneline --decorate --graph --all -8
 $> git checkout pick-your-features
 
@@ -193,7 +192,7 @@ $> git verify
 ```
 
 ## Exercise 20: reabse-complex
-Explanation from git-book https://git-scm.com/book/en/v2/Git-Branching-Rebasing
+Explanation from git-book https://git-scm.com/book/en/v2/Git-Branching-Rebasing (VERY IMPORTANT TO UNDERSTAND THE SOLUTION)
 ```shell
 $> git rebase --onto your-master issue-555 rebase-complex 
 $> git verify
@@ -238,12 +237,11 @@ $> git verify
 ```
 
 ## Exercise 23: find-bug
-1. First method using `git bisect`
 ```shell
 $> git checkout find-bug
 $> git bisect start
 $> git bisect bad
 $> git bisect good 1.0
 $> git bisect run sh -c "openssl enc -base64 -A -d < home-screen-text.txt | grep -v jackass"
-# you will get a commit id when the word was first introduced
+# you will get a commit id when the word jackass was first introduced
 $> git push origin (COMMIT_ID):find-bug
