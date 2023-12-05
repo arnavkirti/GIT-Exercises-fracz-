@@ -105,6 +105,7 @@ $> git verify
 ## Exercise 11: fix-typo
 Note: **--amend** replaces the  tip of the current branch by creating a new commit.
 ```shell
+$> nano file.txt
 # here fix typo in the file
 $> git commit -a --amend
 # here fix the typo in commit message
